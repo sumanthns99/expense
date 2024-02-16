@@ -9,7 +9,12 @@
         h1 {
             padding-left: 400px;
         }
+
         input {
+            border: none;
+        }
+
+        .abc {
             border: none;
         }
     </style>
@@ -21,14 +26,15 @@
     <div class=" container">
         <h1>Feedback System</h1>
         <h4>Overall Rating</h4>
-        <div>* <input value="0" name="1star" id="1star" /></div>
-        <div>** <input value="0" name="2star" id="2star" /></div>
-        <div>*** <input value="0" name="3star" id="3star" /></div>
-        <div>**** <input value="0" name="4star" id="4star" /></div>
-        <div>***** <input value="0" name="5star" id="5star" /></div>
-        <div class="col-3 mt-4">
-            <h4>Feedback Form</h4>
-            <form onsubmit="addData(event)">
+        <form onsubmit="addData(event)">
+            <div class="abc">* <input value="0" name="onestar" id="onestar" /></div>
+            <div>** <input value="0" name="twostar" id="twostar" /></div>
+            <div>*** <input value="0" name="threestar" id="threestar" /></div>
+            <div>**** <input value="0" name="fourstar" id="fourstar" /></div>
+            <div>***** <input value="0" name="fivestar" id="fivestar" /></div>
+            <div class="col-3 mt-4">
+                <h4>Feedback Form</h4>
+
                 <div>
                     <span class="form-group mb-2">
                         <label for="fullName">Name</label>
@@ -49,14 +55,17 @@
                     <button class="btn btn-success" id="submit">
                         Submit
                     </button>
+                    <button class="btn btn-primary" id="update" display="">
+                        Edit
+                    </button>
                     <!-- <input type="button" value = "" onclick="history.go(0)" /> -->
                 </div>
-            </form>
-        </div>
-        <h4>All Feedbacks</h4>
-        <ul id="listOfUsers"></ul>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"></script>
-        <script src="feedback.js"></script>
+        </form>
+    </div>
+    <h4>All Feedbacks</h4>
+    <ul id="listOfUsers"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js"></script>
+    <script src="feedback.js"></script>
 </body>
 
 </html>
